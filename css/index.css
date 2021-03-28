@@ -1,0 +1,239 @@
+.fondo{
+
+    background: rgb(26,81,104);
+    background: linear-gradient(90deg, rgba(26,81,104,1) 0%, rgba(42,25,80,1) 100%);
+
+}
+*{
+
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+
+
+    height: 100vh;
+    background-image: url('../img/fondo4.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+.nav-link{
+
+    font-size: 25px;
+
+}
+
+.contenedorCards{
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+
+
+}
+
+.contenedorCards div{
+
+    background: white;
+
+}
+
+i{
+    color: gray;
+    text-align: center;
+    font-size: 45px;
+
+
+}
+
+span.pink {
+    background: #EF0BD8;
+    border-radius: 0.8em;
+    -moz-border-radius: 0.8em;
+    -webkit-border-radius: 0.8em;
+    color: #ffffff;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.6em;
+    margin-right: 15px;
+    text-align: center;
+    width: 1.6em; 
+  }
+  
+
+.principal{
+
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.principal h1{
+    font-size: 35px;
+    font-family: 'Chango', cursive;
+    line-height: 65px;
+
+}
+
+.contenidofondo{
+    
+    background: #f2f2f2;
+
+}
+
+hr{
+
+    color: rgb(58, 58, 58);
+    background: rgb(116, 116, 116);
+}
+
+
+
+.shadow-4{box-shadow:0 1px 1px rgba(0,0,0,0.15),0 2px 2px rgba(0,0,0,0.15),0 4px 4px rgba(0,0,0,0.15),0 8px 8px rgba(0,0,0,0.15)}.shadow-5{box-shadow:0 1px 1px rgba(0,0,0,0.12),0 2px 2px rgba(0,0,0,0.12),0 4px 4px rgba(0,0,0,0.12),0 8px 8px rgba(0,0,0,0.12),0 16px 16px rgba(0,0,0,0.12)}.shadow-6{box-shadow:0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 8px 8px rgba(0,0,0,0.11),0 16px 16px rgba(0,0,0,0.11),0 32px 32px rgba(0,0,0,0.11)}.shadow-sharp{box-shadow:0 1px 1px rgba(0,0,0,0.25),0 2px 2px rgba(0,0,0,0.2),0 4px 4px rgba(0,0,0,0.15),0 8px 8px rgba(0,0,0,0.1),0 16px 16px rgba(0,0,0,0.05)}.shadow-diffuse{box-shadow:0 1px 1px rgba(0,0,0,0.08),0 2px 2px rgba(0,0,0,0.12),0 4px 4px rgba(0,0,0,0.16),0 8px 8px rgba(0,0,0,0.2)}.shadow-dreamy{box-shadow:0 1px 2px rgba(0,0,0,0.07),0 2px 4px rgba(0,0,0,0.07),0 4px 8px rgba(0,0,0,0.07),0 8px 16px rgba(0,0,0,0.07),0 16px 32px rgba(0,0,0,0.07),0 32px 64px rgba(0,0,0,0.07)}.shadow-shorter{box-shadow:0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 6px 8px rgba(0,0,0,0.11),0 8px 16px rgba(0,0,0,0.11)}.shadow-longer{box-shadow:0 2px 1px rgba(0,0,0,0.09),0 4px 2px rgba(0,0,0,0.09),0 8px 4px rgba(0,0,0,0.09),0 16px 8px rgba(0,0,0,0.09),0 32px 16px rgba(0,0,0,0.09)}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+
+  
+    .contenedorCards{
+
+     
+    
+        grid-template-columns: repeat(1,1fr);
+
+    
+    }
+
+    .subir{
+
+        margin-top: 10px
+
+    }
+
+    .direccionp{
+
+        font-size: 12px;
+
+    }
+    
+
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+
+    .contenedorCards{
+
+  
+    
+        grid-template-columns: repeat(1,1fr);
+
+       
+    
+    }
+
+    .subir{
+
+        margin-top: 10px
+
+    }
+
+    .direccionp{
+
+        font-size: 12px;
+
+    }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .contenedorCards{
+
+  
+    
+        grid-template-columns: repeat(2,1fr);
+
+       
+    
+    }
+
+    .subir{
+
+        margin-top: 10px
+
+    }
+
+    .direccionp{
+
+        font-size: 15px;
+
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    .contenedorCards{
+
+  
+    
+        grid-template-columns: repeat(3,1fr);
+
+       
+    
+    }
+
+    .subir{
+
+        margin-top: 10px
+
+    }
+
+    .direccionp{
+
+        font-size: 15px;
+
+    }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    .contenedorCards{
+
+  
+    
+        grid-template-columns: repeat(4,1fr);
+
+       
+    
+    }
+
+    .subir{
+
+        margin-top: 10px
+
+    }
+
+    .direccionp{
+
+        font-size: 15px;
+
+    }
+
+}
