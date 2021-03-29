@@ -56,7 +56,7 @@ async function   enviarformulario   (e){
     
     const  solicitud = {
 
-        telefono:celular.value,
+        celular:celular.value,
         nombre:nombre.value,
         Apellido:apellido.value,
         correo:correo.value,
