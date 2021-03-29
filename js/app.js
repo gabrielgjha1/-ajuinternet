@@ -8,6 +8,7 @@ const cedula = document.querySelector('#cedula');
 const direccion = document.querySelector('#direccion');
 const correo = document.querySelector('#correo');
 const celular = document.querySelector('#celular');
+const votostotales  = document.querySelector('#votostotales');
 const regex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
 const regex2 = /^\d{8}$/;
 
@@ -26,31 +27,74 @@ eventListeners();
    
     spinner.style.display = 'none';
 
+
+    //al iniciar app
      document.addEventListener('DOMContentLoaded',iniciarApp);
      
 
- 
+
+
+    
+
+     //validar datos
      celular.addEventListener('input',ValidarCelular);
      nombre.addEventListener('input',ValidarNombre);
      apellido.addEventListener('input',ValidarNombre);
      correo.addEventListener('input',ValidarCorreo);
 
      
-     
+     //enviar formulario
      btnEnviar.addEventListener('click',enviarformulario)
      
 
     }
     
-    
+
+//iniciar app    
  function iniciarApp(e){
     
     console.log(btnEnviar);
     btnEnviar.disabled = true;
 
+    TraerVotos();
+
 }
 
 
+//contar votos
+async function SolicitusVotos(){
+    const url="https://chilibreinternet.herokuapp.com/api/solicitud";
+
+    const votos = await fetch(url);
+    const data = await votos.json();
+
+    if ( votos.json >= 400  ){
+        console.log('xd ?');
+
+        throw Error('Error al guardar los datos') ;
+
+    }
+
+    return data;
+
+    
+
+}
+
+async function TraerVotos(){
+
+    try {
+        const votos = await SolicitusVotos();
+        votostotales.textContent = votos.total
+        console.log(votos);
+    } catch (error) {
+        
+    }
+
+}
+
+
+//enviar formulario;
 async function   enviarformulario   (e){
     e.preventDefault();
     
@@ -123,10 +167,10 @@ async function RealizarPeticion(solicitud){
     return solicitudData;
 
 }
+//terminar envio de formulario
 
 
-
-
+//validaciones
  function ValidarCorreo(e){
     const valor = e.target.value;
 
@@ -227,5 +271,4 @@ function validarEnviar(){
 
 }
 
-
-
+//fin de validaciones
